@@ -8,9 +8,12 @@
         android:orientation="horizontal"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
         android:weightSum="100"
         android:gravity="center_vertical"
-        tools:background="@color/colorPrimary">
+        tools:background="@color/colorPrimary"
+        android:id="@+id/llRoot">
 
     <TextView
             android:id="@+id/tvOrderNo"

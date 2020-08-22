@@ -45,7 +45,7 @@
             </LinearLayout>
 
             <TextView
-                    android:id="@+id/tvTitle"
+                    android:id="@+id/tvHeader"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/druk"
@@ -187,12 +187,14 @@
                     android:textColor="#A9FFFFFF"
                     android:textSize="10sp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvVotings"
+            <LinearLayout
+                    android:id="@+id/llVotings"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
                     tools:layout_height="50dp" />
 
             <TextView
@@ -201,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/monsemi"
                     android:paddingStart="16dp"
-                    android:paddingTop="12dp"
+                    android:paddingTop="16dp"
                     android:text="Чтобы проголосовать,\nнеобходимо авторизоваться через СМС-код"
                     android:textColor="#fff"
                     android:textSize="12sp" />
@@ -227,6 +229,7 @@
                     android:focusable="true"
                     android:fontFamily="@font/monsemi"
                     android:inputType="phone"
+                    android:paddingBottom="12dp"
                     android:textColor="#fff"
                     android:textSelectHandle="@drawable/text_handle"
                     android:textSize="24sp"
@@ -236,8 +239,7 @@
                     app:fieldColor="#fff"
                     app:highlightColor="#fff"
                     app:noOfFields="4"
-                    tools:visibility="visible"
-                    android:paddingBottom="12dp"/>
+                    tools:visibility="visible" />
 
         </LinearLayout>
     </ScrollView>
