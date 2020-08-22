@@ -33,7 +33,7 @@
         <FrameLayout
                 android:id="@+id/flBottomnavHolder"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="wrap_content"
                 android:paddingTop="4dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

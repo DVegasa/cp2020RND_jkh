@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:focusable="true"
+        tools:context=".features.voting_screen.VotingFragment">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+            <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_back"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/monsemi"
+                    android:text="Вернуться"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+            <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="12dp"
+                    android:fontFamily="@font/druk"
+                    android:text="Голосование за\nиюль 2020"
+                    android:textColor="#fff"
+                    android:textSize="24sp" />
+
+            <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:fontFamily="@font/monsemi"
+                    android:text="Можно проголосовать\nдо 31 августа включительно"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+            <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="24dp"
+                    android:fontFamily="@font/monbold"
+                    android:text="АННОТАЦИЯ"
+                    android:textColor="#A9FFFFFF"
+                    android:textSize="10sp"/>
+
+            <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/monreg"
+                    android:text="Мы ознакомились с Вашими комментариями за июль и выбрали три самых популярных и насущных вопроса, каждый из которых набрал более 100 лайков. И так получилось, что все они связаны с озеленением придомовой территорией. "
+                    android:textColor="#fff"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.2" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

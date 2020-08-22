@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import io.github.dvegasa.cp2020rnd.features.main_screen.MainFragment
+import io.github.dvegasa.cp2020rnd.features.voting_screen.VotingFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -11,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     val mainFrag = MainFragment.newInstance()
+    lateinit var votingFrag: VotingFragment
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +33,15 @@ class MainActivity : AppCompatActivity() {
         flFragmentHolder.removeAllViews()
         supportFragmentManager.beginTransaction().apply {
             add(flFragmentHolder.id, mainFrag)
+            commit()
+        }
+    }
+
+    fun showVotingScreen() {
+        votingFrag = VotingFragment.newInstance()
+        supportFragmentManager.beginTransaction().apply {
+            add(android.R.id.content, votingFrag)
+            addToBackStack(null)
             commit()
         }
     }
