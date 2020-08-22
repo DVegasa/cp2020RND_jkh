@@ -102,6 +102,7 @@ class VotingDetailsDialog : DialogFragment() {
             1 -> Answers.REFRAIN
             else -> Answers.NO
         }
+        btnVoteNo.text = "Голосовать ПРОТИВ"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

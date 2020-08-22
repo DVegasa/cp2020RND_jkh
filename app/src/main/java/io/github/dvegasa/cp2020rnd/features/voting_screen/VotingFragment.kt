@@ -84,6 +84,11 @@ class VotingFragment : Fragment() {
         val list = this.votingList!!
 
         for (pos in list.indices) {
+
+            if (list[pos].answer != Answers.NOT_ANSWERED) {
+                showBtnSend()
+            }
+
             val view = LayoutInflater.from(context).inflate(R.layout.rvitem_voting, view_.llVotings, false)
             view.apply {
                 tvOrderNo.text = (pos + 1).toString()
@@ -112,6 +117,10 @@ class VotingFragment : Fragment() {
             }
             view_.llVotings.addView(view)
         }
+    }
+
+    private fun showBtnSend() {
+        btnSendResults.visibility = View.VISIBLE
     }
 
     private fun showVotingDetails(pos: Int) {
