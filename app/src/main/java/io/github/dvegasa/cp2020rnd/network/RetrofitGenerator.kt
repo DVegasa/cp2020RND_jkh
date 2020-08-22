@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 
 object RetrofitGenerator {
-    private const val BASE_URL = "https://api.imgbb.com/1/"
+    private const val BASE_URL = "http://89.223.127.81:3000/"
 
     private val client = OkHttpClient.Builder()
         .addInterceptor(HttpLoggingInterceptor().also {

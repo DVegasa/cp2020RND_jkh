@@ -13,10 +13,9 @@ enum class Answers {
 
 @Parcelize
 data class VotingModel(
-    var id: Long,
+    var id: String,
     var title: String,
     var message: String,
-    var photos: List<Int>,
     var answer: Answers = Answers.NOT_ANSWERED,
     var isLocked: Boolean = true
 ) : Parcelable
