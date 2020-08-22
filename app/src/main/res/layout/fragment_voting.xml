@@ -195,7 +195,7 @@
                     tools:layout_height="50dp" />
 
             <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/tvInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/monsemi"
@@ -222,16 +222,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:focusable="true"
                     android:fontFamily="@font/monsemi"
-                    android:inputType="number"
+                    android:inputType="phone"
                     android:textColor="#fff"
                     android:textSelectHandle="@drawable/text_handle"
                     android:textSize="24sp"
+                    android:visibility="gone"
                     app:bottomTextPaddingDp="8dp"
                     app:distanceInBetween="14dp"
                     app:fieldColor="#fff"
                     app:highlightColor="#fff"
-                    app:noOfFields="4" />
+                    app:noOfFields="4"
+                    tools:visibility="visible"
+                    android:paddingBottom="12dp"/>
 
         </LinearLayout>
     </ScrollView>
