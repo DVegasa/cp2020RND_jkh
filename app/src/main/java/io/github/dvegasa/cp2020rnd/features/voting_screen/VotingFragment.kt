@@ -35,6 +35,11 @@ class VotingFragment : Fragment() {
 
         view_.apply {
 
+            btnSendResults.setOnClickListener {
+                btnSendResults.visibility = View.GONE
+                progressBar.visibility = View.VISIBLE
+            }
+
             btnSmsRequest.setOnClickListener {
                 btnSmsRequest.visibility = View.GONE
                 pinField.visibility = View.VISIBLE
@@ -111,6 +116,7 @@ class VotingFragment : Fragment() {
                         else -> ""
                     }
                 }
+
             }
             view.setOnClickListener {
                 showVotingDetails(pos)
