@@ -16,39 +16,41 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="12dp">
 
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     android:padding="16dp">
 
-            <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_back"/>
+                <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_back" />
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/monsemi"
-                    android:text="Вернуться"
-                    android:textColor="#fff"
-                    android:textSize="13sp" />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/monsemi"
+                        android:text="Вернуться"
+                        android:textColor="#fff"
+                        android:textSize="13sp" />
 
             </LinearLayout>
+
             <TextView
                     android:id="@+id/tvTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="12dp"
                     android:fontFamily="@font/druk"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="12dp"
                     android:text="Голосование за\nиюль 2020"
                     android:textColor="#fff"
                     android:textSize="24sp" />
@@ -57,9 +59,9 @@
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/monsemi"
                     android:paddingStart="16dp"
                     android:paddingTop="12dp"
-                    android:fontFamily="@font/monsemi"
                     android:text="Можно проголосовать\nдо 31 августа включительно"
                     android:textColor="#fff"
                     android:textSize="12sp" />
@@ -68,27 +70,169 @@
                     android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/monbold"
                     android:paddingStart="16dp"
                     android:paddingTop="24dp"
-                    android:fontFamily="@font/monbold"
                     android:text="АННОТАЦИЯ"
                     android:textColor="#A9FFFFFF"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp" />
 
             <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="16dp"
-                    android:paddingTop="4dp"
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/monreg"
+                    android:lineSpacingMultiplier="1.2"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
                     android:text="Мы ознакомились с Вашими комментариями за июль и выбрали три самых популярных и насущных вопроса, каждый из которых набрал более 100 лайков. И так получилось, что все они связаны с озеленением придомовой территорией. "
                     android:textColor="#fff"
-                    android:textSize="13sp"
-                    android:lineSpacingMultiplier="1.2" />
+                    android:textSize="13sp" />
+
+            <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/monbold"
+                    android:paddingStart="16dp"
+                    android:paddingTop="24dp"
+                    android:text="ИНИЦИАТОРЫ"
+                    android:textColor="#A9FFFFFF"
+                    android:textSize="10sp" />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingTop="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ava1" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/monreg"
+                        android:text="Екатерина Волкова"
+                        android:textColor="#fff"
+                        android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ava2" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/monreg"
+                        android:text="Эдуард Халтурин"
+                        android:textColor="#fff"
+                        android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ava_sasha" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/monreg"
+                        android:text="Александр Ищенко"
+                        android:textColor="#fff"
+                        android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/monbold"
+                    android:paddingStart="16dp"
+                    android:paddingTop="24dp"
+                    android:text="ВОПРОСЫ ДЛЯ ГОЛОСОВАНИЯ"
+                    android:textColor="#A9FFFFFF"
+                    android:textSize="10sp" />
+
+            <LinearLayout
+                    android:id="@+id/llTopics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical"
+                    tools:layout_height="50dp" />
+
+            <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/monsemi"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:text="Чтобы проголосовать,\nнеобходимо авторизоваться через СМС-код"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+            <Button
+                    android:id="@+id/btnSmsRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="14dp"
+                    android:background="@drawable/bg_btn_auth"
+                    android:fontFamily="@font/monbold"
+                    android:text="Получить СМС-код"
+                    android:textAllCaps="false" />
+
+            <com.poovam.pinedittextfield.LinePinField
+                    android:id="@+id/pinField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/monsemi"
+                    android:inputType="number"
+                    android:textColor="#fff"
+                    android:textSelectHandle="@drawable/text_handle"
+                    android:textSize="24sp"
+                    app:bottomTextPaddingDp="8dp"
+                    app:distanceInBetween="14dp"
+                    app:fieldColor="#fff"
+                    app:highlightColor="#fff"
+                    app:noOfFields="4" />
 
         </LinearLayout>
-
     </ScrollView>
 </LinearLayout>
