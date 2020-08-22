@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import android.widget.LinearLayout
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.poovam.pinedittextfield.PinField
 import io.github.dvegasa.cp2020rnd.R
 import kotlinx.android.synthetic.main.fragment_voting.*
@@ -15,6 +17,8 @@ import kotlinx.android.synthetic.main.fragment_voting.view.*
 
 
 class VotingFragment : Fragment() {
+
+    lateinit var rvVotingsAdapter: RvVotingsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +31,10 @@ class VotingFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_voting, container, false)
 
         view.apply {
+            rvVotingsAdapter = RvVotingsAdapter(getVotingList())
+            rvVotings.layoutManager = LinearLayoutManager(context)
+            rvVotings.adapter = rvVotingsAdapter
+
             btnSmsRequest.setOnClickListener {
                 btnSmsRequest.visibility = View.GONE
                 pinField.visibility = View.VISIBLE
@@ -44,8 +52,16 @@ class VotingFragment : Fragment() {
                     return true
                 }
             }
+
+            llBack.setOnClickListener {
+                this@VotingFragment.requireFragmentManager().popBackStack()
+            }
         }
         return view
+    }
+
+    private fun getVotingList(): List<VotingModel> {
+        return listOf()
     }
 
     private fun pinCodeEntered() {
