@@ -52,7 +52,7 @@
                     android:paddingStart="16dp"
                     android:paddingTop="4dp"
                     android:paddingEnd="12dp"
-                    android:text="Голосование за\nиюль 2020"
+                    android:text="Собрание за\nиюль 2020"
                     android:textColor="#fff"
                     android:textSize="24sp" />
 

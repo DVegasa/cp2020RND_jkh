@@ -1,129 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#fff"
-        app:cardCornerRadius="24dp">
+        android:background="@android:color/transparent">
 
-    <ScrollView
+    <androidx.cardview.widget.CardView
+            android:layout_margin="12dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#fff"
+            app:cardCornerRadius="24dp">
 
-        <LinearLayout
+        <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="14dp"
-                android:orientation="vertical"
-                android:paddingBottom="36dp">
+                android:layout_height="match_parent">
 
-            <TextView
-                    android:id="@+id/tvNo"
+            <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:layout_marginBottom="12dp"
-                    android:fontFamily="@font/druk"
-                    android:text="№ 1"
-                    android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:layout_height="match_parent"
+                    android:layout_margin="14dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="36dp">
 
-            <TextView
-                    android:id="@+id/tvDetailsHeader"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/monbold"
-                    android:text="Установка футбольных ворот на придворовой территории"
-                    android:textColor="#000"
-                    android:textSize="16sp" />
+                <TextView
+                        android:id="@+id/tvNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/druk"
+                        android:text="№ 1"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
 
-            <TextView
-                    android:id="@+id/tvDetails"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:fontFamily="@font/monreg"
-                    android:text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
-                    android:textColor="#000"
-                    android:textSize="14sp" />
+                <TextView
+                        android:id="@+id/tvDetailsHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/monbold"
+                        android:text="Установка футбольных ворот на придворовой территории"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
 
-            <Button
-                    android:id="@+id/btnVoteYes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:background="@drawable/bg_btn_vote_normal"
-                    android:drawablePadding="110dp"
-                    android:fontFamily="@font/monreg"
-                    android:paddingStart="24dp"
-                    android:paddingEnd="24dp"
-                    android:text="Голосовать ЗА"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="false" />
+                <TextView
+                        android:id="@+id/tvDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/monreg"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+                        android:textColor="#000"
+                        android:textSize="14sp" />
 
-            <Button
-                    android:id="@+id/btnVoteRefrain"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/bg_btn_vote_normal"
-                    android:drawablePadding="110dp"
-                    android:fontFamily="@font/monreg"
-                    android:paddingStart="24dp"
-                    android:paddingEnd="24dp"
-                    android:text="Воздержаться"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="false" />
+                <Button
+                        android:id="@+id/btnVoteYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/bg_btn_vote_normal"
+                        android:drawablePadding="110dp"
+                        android:fontFamily="@font/monreg"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="24dp"
+                        android:text="Голосовать ЗА"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false" />
 
-            <Button
-                    android:id="@+id/btnVoteNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/bg_btn_vote_normal"
-                    android:drawablePadding="110dp"
-                    android:fontFamily="@font/monreg"
-                    android:paddingStart="24dp"
-                    android:paddingEnd="24dp"
-                    android:text="Голосовать ПРОТИВ"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="false" />
+                <Button
+                        android:id="@+id/btnVoteRefrain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_btn_vote_normal"
+                        android:drawablePadding="110dp"
+                        android:fontFamily="@font/monreg"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="24dp"
+                        android:text="Воздержаться"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false" />
 
-            <TextView
-                    android:id="@+id/tvCantVote"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/monsemi"
-                    android:paddingTop="16dp"
-                    android:text="Чтобы проголосовать, необходимо авторизоваться через СМС-код на предыдущем экране"
-                    android:textColor="#000"
-                    android:textSize="14sp"
-                    android:visibility="gone"/>
+                <Button
+                        android:id="@+id/btnVoteNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_btn_vote_normal"
+                        android:drawablePadding="110dp"
+                        android:fontFamily="@font/monreg"
+                        android:paddingStart="18dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:paddingEnd="24dp"
+                        android:text="Голосовать ПРОТИВ"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false" />
 
-            <Button
-                    android:id="@+id/btnConfirmAnswer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:textColor="#fff"
-                    android:background="@drawable/bg_btn_vote_confirm"
-                    android:fontFamily="@font/monbold"
-                    android:text="Подтвердить"
-                    android:textAllCaps="false"
-                    android:enabled="false"/>
+                <TextView
+                        android:id="@+id/tvCantVote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/monsemi"
+                        android:paddingTop="16dp"
+                        android:text="Чтобы проголосовать, необходимо авторизоваться через СМС-код на предыдущем экране"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
 
-            <Button
-                    android:id="@+id/btnBackFromVoting"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:textColor="#fff"
-                    android:background="@drawable/bg_btn_vote_back"
-                    android:fontFamily="@font/monbold"
-                    android:text="Вернуться"
-                    android:textAllCaps="false"
-                    android:visibility="gone"/>
+                <Button
+                        android:id="@+id/btnConfirmAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/bg_btn_vote_confirm"
+                        android:enabled="false"
+                        android:fontFamily="@font/monbold"
+                        android:text="Подтвердить"
+                        android:textAllCaps="false"
+                        android:textColor="#fff" />
 
-        </LinearLayout>
-    </ScrollView>
-</androidx.cardview.widget.CardView>
+                <Button
+                        android:id="@+id/btnBackFromVoting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/bg_btn_vote_back"
+                        android:fontFamily="@font/monbold"
+                        android:text="Вернуться"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

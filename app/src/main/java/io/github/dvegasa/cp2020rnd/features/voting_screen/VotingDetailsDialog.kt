@@ -32,7 +32,7 @@ class VotingDetailsDialog : DialogFragment() {
     ): View? {
         v = inflater.inflate(R.layout.voting_details, container, false)
         v.apply {
-            tvNo.text = pos.toString()
+            tvNo.text = "№ " + pos.toString()
             tvDetailsHeader.text = voting.title
             tvDetails.text = voting.message
 
