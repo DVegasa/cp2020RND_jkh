@@ -32,6 +32,22 @@ class VotingDetailsDialog : DialogFragment() {
             tvNo.text = pos.toString()
             tvDetailsHeader.text = voting.title
             tvDetails.text = voting.message
+
+            if (voting.isLocked) {
+                btnVoteNo.visibility = View.GONE
+                btnVoteYes.visibility = View.GONE
+                btnVoteRefrain.visibility = View.GONE
+                tvCantVote.visibility = View.VISIBLE
+                btnConfirmAnswer.visibility = View.GONE
+                btnBackFromVoting.visibility = View.VISIBLE
+            } else {
+                btnVoteNo.visibility = View.VISIBLE
+                btnVoteYes.visibility = View.VISIBLE
+                btnVoteRefrain.visibility = View.VISIBLE
+                tvCantVote.visibility = View.GONE
+                btnConfirmAnswer.visibility = View.VISIBLE
+                btnBackFromVoting.visibility = View.GONE
+            }
         }
         return v
     }
