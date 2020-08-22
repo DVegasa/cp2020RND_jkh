@@ -4,8 +4,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp">
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
     <Button
             android:id="@+id/button"
@@ -19,13 +19,13 @@
             android:drawablePadding="22dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:fontFamily="@font/monreg"
+            android:fontFamily="@font/monsemi"
             android:paddingStart="24dp"
             android:paddingEnd="24dp"
             android:text="Аккаунт"
             android:textAllCaps="false"
             android:textColor="#fff"
-            android:textSize="12sp"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
