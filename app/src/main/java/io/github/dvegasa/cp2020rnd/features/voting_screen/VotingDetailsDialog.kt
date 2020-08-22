@@ -55,8 +55,28 @@ class VotingDetailsDialog : DialogFragment() {
             btnVoteYes.setOnClickListener { radioButtonsActivate(0) }
             btnVoteRefrain.setOnClickListener { radioButtonsActivate(1) }
             btnVoteNo.setOnClickListener { radioButtonsActivate(2) }
+
+            btnBackFromVoting.setOnClickListener { close() }
+            btnConfirmAnswer.setOnClickListener {
+                close()
+            }
         }
         return v
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        when (voting.answer) {
+            Answers.YES -> radioButtonsActivate(0)
+            Answers.REFRAIN -> radioButtonsActivate(1)
+            Answers.NO -> radioButtonsActivate(2)
+        }
+    }
+
+    private fun close() {
+        (parentFragment as VotingFragment).updateVotingsUI()
+        dismiss()
     }
 
     // 0 YES, 1 Refrain, 2 No
@@ -76,6 +96,12 @@ class VotingDetailsDialog : DialogFragment() {
         b.setBackgroundResource(R.drawable.bg_btn_vote_picked)
         val img = ResourcesCompat.getDrawable(resources, R.drawable.ic_vote_mark, null)
         b.setCompoundDrawablesWithIntrinsicBounds(null, null, img, null)
+
+        voting.answer = when (pos) {
+            0 -> Answers.YES
+            1 -> Answers.REFRAIN
+            else -> Answers.NO
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

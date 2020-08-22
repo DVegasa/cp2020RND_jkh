@@ -1,6 +1,7 @@
 package io.github.dvegasa.cp2020rnd.features.voting_screen
 
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -77,7 +78,7 @@ class VotingFragment : Fragment() {
         updateVotingsUI()
     }
 
-    private fun updateVotingsUI() {
+    fun updateVotingsUI() {
         view_.llVotings.removeAllViews()
 
         val list = this.votingList!!
@@ -116,7 +117,7 @@ class VotingFragment : Fragment() {
     private fun showVotingDetails(pos: Int) {
         val voting = votingList?.get(pos)
         val dialog = VotingDetailsDialog.newInstance(voting!!, pos + 1)
-        dialog!!.show(childFragmentManager, null)
+        dialog.show(childFragmentManager, null)
     }
 
     companion object {
