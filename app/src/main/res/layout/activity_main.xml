@@ -7,11 +7,11 @@
         android:background="#EFEFEF"
         tools:context=".MainActivity">
 
-    <FrameLayout
+    <ScrollView
             android:id="@+id/flFragmentHolder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintBottom_toTopOf="@id/llBottomnav"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
         <FrameLayout
                 android:id="@+id/flBottomnavHolder"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:paddingTop="4dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadBottomNav()
         loadContent()
+        loadBottomNav()
     }
 
     private fun loadBottomNav() {

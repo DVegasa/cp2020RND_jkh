@@ -3,9 +3,10 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp">
+        android:layout_height="75dp"
+        android:background="#fff"
+        android:clickable="true"
+        android:focusable="true">
 
     <Button
             android:id="@+id/button"
