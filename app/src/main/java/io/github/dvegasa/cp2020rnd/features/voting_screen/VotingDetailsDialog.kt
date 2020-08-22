@@ -8,8 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.Button
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.DialogFragment
 import io.github.dvegasa.cp2020rnd.R
+import kotlinx.android.synthetic.main.voting_details.*
 import kotlinx.android.synthetic.main.voting_details.view.*
 
 
@@ -48,8 +51,31 @@ class VotingDetailsDialog : DialogFragment() {
                 btnConfirmAnswer.visibility = View.VISIBLE
                 btnBackFromVoting.visibility = View.GONE
             }
+
+            btnVoteYes.setOnClickListener { radioButtonsActivate(0) }
+            btnVoteRefrain.setOnClickListener { radioButtonsActivate(1) }
+            btnVoteNo.setOnClickListener { radioButtonsActivate(2) }
         }
         return v
+    }
+
+    // 0 YES, 1 Refrain, 2 No
+    private fun radioButtonsActivate(pos: Int) {
+        btnConfirmAnswer.isEnabled = true
+        btnVoteNo.setBackgroundResource(R.drawable.bg_btn_vote_normal)
+        btnVoteYes.setBackgroundResource(R.drawable.bg_btn_vote_normal)
+        btnVoteRefrain.setBackgroundResource(R.drawable.bg_btn_vote_normal)
+        btnVoteNo.setCompoundDrawables(null, null, null, null)
+        btnVoteYes.setCompoundDrawables(null, null, null, null)
+        btnVoteRefrain.setCompoundDrawables(null, null, null, null)
+        val b: Button = when (pos) {
+            0 -> btnVoteYes
+            1 -> btnVoteRefrain
+            else -> btnVoteNo
+        }
+        b.setBackgroundResource(R.drawable.bg_btn_vote_picked)
+        val img = ResourcesCompat.getDrawable(resources, R.drawable.ic_vote_mark, null)
+        b.setCompoundDrawablesWithIntrinsicBounds(null, null, img, null)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,7 +107,10 @@ class VotingDetailsDialog : DialogFragment() {
         super.onStart()
         val dialog: Dialog? = dialog
         if (dialog != null) {
-            dialog.window!!.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+            dialog.window!!.setLayout(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT
+            )
             dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
     }
