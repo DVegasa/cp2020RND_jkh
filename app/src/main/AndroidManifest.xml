@@ -12,7 +12,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name=".features.login_screen.LoginActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity
+                android:name=".MainActivity"
+
+                android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
